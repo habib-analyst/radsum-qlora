@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "radsum-qlora"
+version = "0.1.0"
+description = "QLoRA fine-tuning of a 2B VLM for radiology finding summarization + finding-hallucination rate metric"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "torch>=2.2",
+    "transformers>=4.44",
+    "peft>=0.12",
+    "bitsandbytes>=0.43",
+    "accelerate>=0.33",
+    "qwen-vl-utils",
+    "datasets",
+    "huggingface_hub",
+    "pandas",
+    "pyarrow",
+    "pillow",
+    "scikit-learn",
+    "pyyaml",
+    "tqdm",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,27 @@
+# radsum-qlora training config — Qwen2-VL-2B QLoRA on IU X-ray
+# Budget: ~8-12 GPU-h on a Kaggle T4 for 3 epochs (2697 train samples).
+
+model_id: "Qwen/Qwen2-VL-2B-Instruct"
+manifest_path: "data/processed/manifest.parquet"  # built by data.py
+seed: 42
+
+# QLoRA
+lora_r: 64
+lora_alpha: 128
+lora_dropout: 0.05
+target_modules: ["q_proj", "k_proj", "v_proj", "o_proj",
+                 "gate_proj", "up_proj", "down_proj"]
+
+# Optimization
+learning_rate: 0.0002
+weight_decay: 0.0
+warmup_ratio: 0.03
+epochs: 3
+grad_accum: 16          # per-device batch 1 -> effective batch 16
+
+# Vision resolution caps (Qwen2-VL dynamic resolution, multiples of 28)
+min_pixels: 12544       # 28*28*16
+max_pixels: 401408      # 28*28*512  (~512 visual tokens)
+
+logging_steps: 10
+save_steps: 200

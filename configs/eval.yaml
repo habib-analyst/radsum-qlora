@@ -1,0 +1,8 @@
+# radsum-qlora eval config
+model_id: "Qwen/Qwen2-VL-2B-Instruct"
+manifest_path: "data/processed/manifest.parquet"
+chexbert_weights: "weights/chexbert.pth"
+
+eval_min_pixels: 12544
+eval_max_pixels: 200704   # 28*28*256 — faster generation
+max_new_tokens: 128

@@ -1,0 +1,16 @@
+# radsum-qlora requirements
+# Training/eval run on Kaggle T4 (CUDA); CPU-only for metrics/data prep.
+torch>=2.2
+transformers>=4.44
+peft>=0.12
+bitsandbytes>=0.43
+accelerate>=0.33
+qwen-vl-utils
+datasets
+huggingface_hub
+pandas
+pyarrow
+pillow
+scikit-learn
+pyyaml
+tqdm
