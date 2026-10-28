@@ -1,0 +1,28 @@
+{
+  "n_samples": 200,
+  "perturbation_test": {
+    "k=0": {
+      "macro_fhr": 0.3170731707317073,
+      "micro_fhr": 0.4411764705882353
+    },
+    "k=1": {
+      "macro_fhr": 0.884090909090909,
+      "micro_fhr": 0.8311688311688312
+    },
+    "k=2": {
+      "macro_fhr": 0.9164154103852596,
+      "micro_fhr": 0.8921568627450981
+    },
+    "k=4": {
+      "macro_fhr": 0.9290833333333333,
+      "micro_fhr": 0.9182561307901907
+    }
+  },
+  "negation_stress_macro_fhr": 0.33712121212121215,
+  "agreement": {
+    "chexbert_macro_fhr": 0.3170731707317073,
+    "keyword_macro_fhr": 0.5571428571428572,
+    "spearman_rho": 0.5559506875296351,
+    "n_aligned_samples": 37
+  }
+}

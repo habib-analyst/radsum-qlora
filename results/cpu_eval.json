@@ -1,0 +1,42 @@
+{
+  "labeler": "negation-aware keyword matcher (radsum.validate_metric.keyword_fhr)",
+  "provenance": {
+    "shards": [
+      "train-00000-of-00005-c80629f6027d8eb1.parquet",
+      "train-00001-of-00005-07e6c158a3f56170.parquet",
+      "train-00002-of-00005-653f05c8b15c22c6.parquet",
+      "train-00003-of-00005-1d66a487a8489b7f.parquet",
+      "train-00004-of-00005-208b7d689f1c7b70.parquet"
+    ],
+    "rows_in_shards": 3851,
+    "rows_after_text_filter": 3851,
+    "test_split_rows": 760,
+    "n_evaluated": 760
+  },
+  "gold_impression_fhr": {
+    "macro_fhr": 0.6659313725490196,
+    "micro_fhr": 0.6965317919075145,
+    "n_scored": 204
+  },
+  "perturbation_test": {
+    "k=0": {
+      "macro_fhr": 0.6659313725490196,
+      "micro_fhr": 0.6965317919075145
+    },
+    "k=1": {
+      "macro_fhr": 0.8341979725700656,
+      "micro_fhr": 0.8160535117056856
+    },
+    "k=2": {
+      "macro_fhr": 0.8785777190664906,
+      "micro_fhr": 0.8624849215922799
+    },
+    "k=4": {
+      "macro_fhr": 0.8901315789473684,
+      "micro_fhr": 0.8875870804306523
+    }
+  },
+  "perturbation_monotonic": true,
+  "negation_stress_macro_fhr": 0.6659313725490196,
+  "rouge_l_impression_vs_findings_mean": 0.09622583110968587
+}
